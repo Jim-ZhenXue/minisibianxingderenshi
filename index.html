@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <!-- 标题栏 -->
+        <div class="game-header">
+            <div class="game-title">
+                <span class="current-mission" id="currentMission">准备开始冒险...</span>
+            </div>
+        </div>
+
+        <!-- 控制栏 -->
+        <div class="action-controls">
+            <button id="checkButton" class="action-btn">
+                <i class="fas fa-check-circle"></i> 提交
+            </button>
+            <button id="hintButton" class="action-btn">
+                <i class="fas fa-lightbulb"></i> 提示
+            </button>
+            <button id="resetButton" class="action-btn">
+                <i class="fas fa-undo"></i> 重置
+            </button>
+        </div>
+
+        <!-- 画布区域 -->
+        <div class="game-main">
+            <div class="display-bar">
+                <div class="tech-title">四边形战士<i class="fas fa-square polygon-icon"></i>几何王国大冒险</div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <div class="canvas-tools">
+                <button id="drawMode" class="tool-btn active">
+                    <i class="fas fa-pencil-alt"></i> 绘制顶点
+                </button>
+                <button id="dragMode" class="tool-btn">
+                    <i class="fas fa-hand-paper"></i> 拖拽顶点
+                </button>
+                <button id="eraseMode" class="tool-btn">
+                    <i class="fas fa-eraser"></i> 擦除顶点
+                </button>
+            </div>
+        </div>
+
+        <!-- 状态栏 -->
+        <div class="player-status">
+            <div class="level-badge">
+                <i class="fas fa-star"></i>
+                等级: <span id="playerLevel">1</span>
+            </div>
+            <div class="score-badge">
+                <i class="fas fa-coins"></i>
+                金币: <span id="score">0</span>
+            </div>
+            <div class="lives">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog Templates -->
+    <div class="dialog" id="levelCompleteDialog" style="display: none;">
+        <div class="dialog-content">
+            <h2 id="messageText">恭喜通关！</h2>
+            <div class="rewards">
+                <div class="coins">
+                    <i class="fas fa-coins"></i>
+                    <span id="rewardCoins">0</span>
+                </div>
+                <div class="exp">
+                    <i class="fas fa-star"></i>
+                    <span id="rewardExp">0</span>
+                </div>
+            </div>
+            <button id="nextLevelBtn" class="action-btn">
+                <i class="fas fa-forward"></i> 下一关
+            </button>
+            <button id="tryAgainBtn" class="action-btn" style="display: none;">
+                <i class="fas fa-redo"></i> 再来一次
+            </button>
+        </div>
+    </div>
+
+    <div class="dialog" id="gameOverDialog" style="display: none;">
+        <div class="dialog-content">
+            <h2>游戏结束</h2>
+            <p>别灰心，再试一次吧！</p>
+            <button id="restartBtn" class="action-btn">
+                <i class="fas fa-redo"></i> 重新开始
+            </button>
+        </div>
+    </div>
+
+    <div id="achievementPopup" class="achievement-popup">
+        <i class="fa-solid fa-trophy"></i>
+        <span id="achievementText"></span>
+    </div>
+
+    <div id="careerConnection" class="career-connection">
+        <div class="career-glow"></div>
+        <div class="career-content">
+            <h1 class="career-title">
+                链接生涯
+                <div class="light-beam"></div>
+            </h1>
+            <div class="career-line"></div>
+            <p class="career-subtitle">CONNECT YOUR FUTURE</p>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

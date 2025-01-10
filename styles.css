@@ -37,6 +37,7 @@ body {
     gap: 10px;
     border-radius: var(--border-radius);
     align-items: center;
+    position: relative;
 }
 
 .game-layout {
@@ -882,4 +883,20 @@ body {
 .dialog .action-btn {
     padding: 4px 8px;
     font-size: 0.55em;
+}
+
+/* 返回按钮样式 */
+#backToMiniProgram {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: auto;
+    padding: 8px 15px;
+    font-size: 0.9em;
+    z-index: 1000;
+    background: rgba(26, 115, 232, 0.9);
+}
+
+#backToMiniProgram:hover {
+    background: rgba(21, 87, 176, 0.9);
 }

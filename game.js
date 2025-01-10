@@ -1,3 +1,19 @@
+// Back button functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const backButton = document.querySelector('.back-button');
+    if (backButton) {
+        backButton.addEventListener('click', () => {
+            // If in WeChat Mini Program environment
+            if (typeof wx !== 'undefined' && wx.miniProgram) {
+                wx.miniProgram.navigateBack();
+            } else {
+                // For web browser environment
+                window.history.back();
+            }
+        });
+    }
+});
+
 class GeometryKingdom {
     constructor() {
         this.initializeGame();

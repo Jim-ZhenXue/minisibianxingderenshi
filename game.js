@@ -1,19 +1,3 @@
-// Back button functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const backButton = document.querySelector('.back-button');
-    if (backButton) {
-        backButton.addEventListener('click', () => {
-            // If in WeChat Mini Program environment
-            if (typeof wx !== 'undefined' && wx.miniProgram) {
-                wx.miniProgram.navigateBack();
-            } else {
-                // For web browser environment
-                window.history.back();
-            }
-        });
-    }
-});
-
 class GeometryKingdom {
     constructor() {
         this.initializeGame();
@@ -144,6 +128,12 @@ class GeometryKingdom {
             document.getElementById('levelCompleteDialog').style.display = 'none';
         });
         document.getElementById('restartBtn').addEventListener('click', () => this.restartGame());
+        document.getElementById('backToMiniProgram').addEventListener('click', () => {
+            // 调用微信小程序的返回方法
+            if (window.wx && window.wx.miniProgram) {
+                window.wx.miniProgram.navigateBack();
+            }
+        });
 
         // Character selection
         document.querySelectorAll('.character').forEach(char => {

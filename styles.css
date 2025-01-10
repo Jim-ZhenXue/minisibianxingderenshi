@@ -88,8 +88,6 @@ body {
     padding: 0;
     margin-bottom: 10px;
     width: 100%;
-    display: flex;
-    align-items: center;
 }
 
 .game-title {
@@ -884,26 +882,4 @@ body {
 .dialog .action-btn {
     padding: 4px 8px;
     font-size: 0.55em;
-}
-
-.back-button {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 50%;
-    background: transparent;
-    transition: background-color 0.3s;
-    margin-right: 10px;
-}
-
-.back-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.back-button i {
-    font-size: 1.2em;
-    color: var(--text-color);
 }

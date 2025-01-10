@@ -86,10 +86,34 @@ class GeometryKingdom {
     }
 
     setupEventListeners() {
-        // Canvas events
+        // Canvas events - mouse
         this.canvas.addEventListener('mousedown', this.handleMouseDown.bind(this));
         this.canvas.addEventListener('mousemove', this.handleMouseMove.bind(this));
         this.canvas.addEventListener('mouseup', this.handleMouseUp.bind(this));
+
+        // Canvas events - touch
+        this.canvas.addEventListener('touchstart', (e) => {
+            e.preventDefault(); // 防止触发鼠标事件
+            const touch = e.touches[0];
+            const rect = this.canvas.getBoundingClientRect();
+            const x = touch.clientX - rect.left;
+            const y = touch.clientY - rect.top;
+            this.handleMouseDown({ clientX: touch.clientX, clientY: touch.clientY });
+        });
+
+        this.canvas.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            const touch = e.touches[0];
+            const rect = this.canvas.getBoundingClientRect();
+            const x = touch.clientX - rect.left;
+            const y = touch.clientY - rect.top;
+            this.handleMouseMove({ clientX: touch.clientX, clientY: touch.clientY });
+        });
+
+        this.canvas.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            this.handleMouseUp();
+        });
 
         // Button events
         document.getElementById('drawMode').addEventListener('click', () => this.setMode('draw'));

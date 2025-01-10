@@ -446,6 +446,7 @@ body {
     border-radius: 0;
     margin-bottom: 0;
     display: block;
+    margin-top: -30px;
 }
 
 .pill-panel {

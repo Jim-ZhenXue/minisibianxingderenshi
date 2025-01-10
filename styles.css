@@ -58,6 +58,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-top: 40px;
 }
 
 /* 游戏主区域样式 */
@@ -81,6 +82,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 100px;
 }
 
 /* 标题栏样式 */
@@ -891,12 +893,19 @@ body {
     left: 10px;
     top: 10px;
     width: auto;
-    padding: 8px 15px;
-    font-size: 0.9em;
+    padding: 8px;
+    font-size: 1.2em;
     z-index: 1000;
-    background: rgba(26, 115, 232, 0.9);
+    background: transparent;
+    border: none;
+    color: var(--text-color);
 }
 
 #backToMiniProgram:hover {
-    background: rgba(21, 87, 176, 0.9);
+    transform: scale(1.2);
+    background: transparent;
+}
+
+#backToMiniProgram i {
+    font-size: 1.2em;
 }

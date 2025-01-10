@@ -38,7 +38,29 @@
                 <div class="display-bar">
                     <div class="tech-title">四边形战士<i class="fas fa-square polygon-icon"></i>几何王国大冒险</div>
                 </div>
-                <canvas id="gameCanvas"></canvas>
+                <div class="canvas-area">
+                    <canvas id="gameCanvas"></canvas>
+                    <div class="pill-panel">
+                        <div class="pill-content">四边形战士<i class="fas fa-square polygon-icon"></i>几何王国大冒险</div>
+                    </div>
+                    <div class="game-status-sidebar">
+                        <div class="player-status">
+                            <div class="level-badge">
+                                <i class="fas fa-star"></i>
+                                等级: <span id="playerLevel">1</span>
+                            </div>
+                            <div class="score-badge">
+                                <i class="fas fa-coins"></i>
+                                金币: <span id="score">0</span>
+                            </div>
+                            <div class="lives">
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="canvas-tools">
                     <button id="drawMode" class="tool-btn active">
                         <i class="fas fa-pencil-alt"></i> 绘制顶点
@@ -49,25 +71,6 @@
                     <button id="eraseMode" class="tool-btn">
                         <i class="fas fa-eraser"></i> 擦除顶点
                     </button>
-                </div>
-            </div>
-
-            <!-- 右侧状态栏 -->
-            <div class="game-status-sidebar">
-                <div class="player-status">
-                    <div class="level-badge">
-                        <i class="fas fa-star"></i>
-                        等级: <span id="playerLevel">1</span>
-                    </div>
-                    <div class="score-badge">
-                        <i class="fas fa-coins"></i>
-                        金币: <span id="score">0</span>
-                    </div>
-                    <div class="lives">
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-heart"></i>
-                    </div>
                 </div>
             </div>
         </div>

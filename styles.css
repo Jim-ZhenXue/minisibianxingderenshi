@@ -69,13 +69,13 @@ body {
 
 /* 右侧状态栏样式 */
 .game-status-sidebar {
-    width: 200px;
+    width: 40px;
     background: var(--background-color);
-    padding: 20px;
+    padding: 10px;
     border-radius: var(--border-radius);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
 
 /* 标题栏样式 */
@@ -130,19 +130,22 @@ body {
 .player-status {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
 }
 
 .level-badge, .score-badge {
     background: linear-gradient(135deg, #4a148c, #7b1fa2);
     color: white;
-    padding: 15px;
+    padding: 10px;
     border-radius: var(--border-radius);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    font-size: 1em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    gap: 5px;
+    font-size: 0.8em;
+    text-align: center;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
 }
 
 .score-badge {
@@ -151,13 +154,27 @@ body {
 
 .lives {
     display: flex;
-    justify-content: center;
-    gap: 12px;
-    font-size: 1.5em;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2em;
     color: #ff4444;
-    padding: 15px;
+    padding: 10px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius);
+}
+
+.level-badge i, .score-badge i {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.level-badge i {
+    color: #e1bee7;
+}
+
+.score-badge i {
+    color: #ffcdd2;
 }
 
 /* Header Styles */
@@ -455,14 +472,52 @@ body {
     animation: rotate 4s linear infinite;
 }
 
-#gameCanvas {
+.canvas-area {
     order: 2;
-    width: 100%;
+    display: flex;
+    gap: 15px;
+    margin-bottom: 0;
+}
+
+#gameCanvas {
+    flex: 1;
     height: 425px;
     background: white;
     border-radius: 0;
     margin-bottom: 0;
     display: block;
+}
+
+.pill-panel {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding: 20px 10px;
+}
+
+.pill-panel .pill-content {
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Microsoft YaHei", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.pill-panel .polygon-icon {
+    font-size: 0.9em;
+    display: block;
+    color: #1a73e8;
+    animation: rotate 4s linear infinite;
 }
 
 .canvas-tools {

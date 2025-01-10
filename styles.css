@@ -440,18 +440,23 @@ body {
 }
 
 #gameCanvas {
-    width: 382.5px;
-    height: 382.5px;
+    width: 391px;
+    height: 391px;
     background: white;
     border-radius: 0;
     margin-bottom: 0;
     display: block;
     margin-top: -30px;
+    touch-action: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .pill-panel {
-    width: 36px;
-    height: 382.5px;
+    width: 36.8px;
+    height: 391px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -511,7 +516,7 @@ body {
     flex-wrap: nowrap;
     margin-bottom: 0;
     background: var(--background-color);
-    width: 382.5px;
+    width: 391px;
 }
 
 .canvas-tools .tool-btn {
@@ -524,6 +529,8 @@ body {
     border: 2px solid #e0e0e0;
     border-top: none;
     margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .canvas-tools .tool-btn:first-child {

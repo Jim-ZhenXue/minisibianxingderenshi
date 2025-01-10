@@ -440,8 +440,8 @@ body {
 }
 
 #gameCanvas {
-    width: 425px;
-    height: 425px;
+    width: 382.5px;
+    height: 382.5px;
     background: white;
     border-radius: 0;
     margin-bottom: 0;
@@ -450,8 +450,8 @@ body {
 }
 
 .pill-panel {
-    width: 40px;
-    height: 425px;
+    width: 36px;
+    height: 382.5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -511,7 +511,7 @@ body {
     flex-wrap: nowrap;
     margin-bottom: 0;
     background: var(--background-color);
-    width: 425px;
+    width: 382.5px;
 }
 
 .canvas-tools .tool-btn {

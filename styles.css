@@ -907,11 +907,6 @@ body {
     background: transparent;
 }
 
-#backToMiniProgram:hover {
-    transform: scale(1.2);
-    background: transparent;
-}
-
 #backToMiniProgram i {
     font-size: 0.6em;
 }

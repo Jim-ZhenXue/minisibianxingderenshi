@@ -425,6 +425,10 @@ class GeometryKingdom {
                 setTimeout(() => {
                     dialog.style.display = 'none';
                     document.getElementById('careerConnection').classList.add('show');
+                    // 3秒后自动返回小程序
+                    setTimeout(() => {
+                        document.getElementById('backToMiniProgram').click();
+                    }, 3000);
                 }, 3000);
             }
         };

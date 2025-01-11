@@ -428,7 +428,7 @@ class GeometryKingdom {
                     // 3秒后自动返回小程序
                     setTimeout(() => {
                         document.getElementById('backToMiniProgram').click();
-                    }, 3000);
+                    }, 5000);
                 }, 3000);
             }
         };

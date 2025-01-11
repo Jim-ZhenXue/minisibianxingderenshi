@@ -888,13 +888,13 @@ body {
 }
 
 /* 返回按钮样式 */
-#backToMiniProgram {
+.back-btn {
     position: absolute;
     left: 10px;
     top: 10px;
     width: auto;
-    padding: 8px;
-    font-size: 1.2em;
+    padding: 4px;
+    font-size: 0.6em;
     z-index: 1000;
     background: transparent;
     border: none;
@@ -907,5 +907,5 @@ body {
 }
 
 #backToMiniProgram i {
-    font-size: 1.2em;
+    font-size: 0.6em;
 }

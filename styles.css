@@ -899,14 +899,22 @@ body {
     background: transparent;
     border: none;
     color: var(--text-color);
-    transition: opacity 0.3s ease;
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
-.back-btn:hover {
-    opacity: 0.8;
+.back-btn:hover,
+.back-btn:active,
+.back-btn:focus {
     background: transparent;
+    -webkit-transform: none !important;
+    transform: none !important;
 }
 
 #backToMiniProgram i {
     font-size: 0.6em;
+    -webkit-transform: none !important;
+    transform: none !important;
 }

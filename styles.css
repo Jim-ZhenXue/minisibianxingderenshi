@@ -899,6 +899,12 @@ body {
     background: transparent;
     border: none;
     color: var(--text-color);
+    transition: opacity 0.3s ease;
+}
+
+.back-btn:hover {
+    opacity: 0.8;
+    background: transparent;
 }
 
 #backToMiniProgram:hover {

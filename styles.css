@@ -453,7 +453,7 @@ body {
     border-radius: 0;
     margin-bottom: 0;
     display: block;
-    margin-top: -15px;
+    margin-top: -10px;
     touch-action: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -472,7 +472,7 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px 10px;
     border-bottom: 1px solid #e0e0e0;
-    margin-top: -15px;
+    margin-top: -10px;
 }
 
 .pill-panel .pill-content {

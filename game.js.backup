@@ -151,11 +151,6 @@ class GeometryKingdom {
     }
 
     handleMouseDown(e) {
-        // 首次点击时初始化音频系统
-        if (window.audioManager && !window.audioManager.initialized) {
-            window.audioManager.initialize();
-        }
-        
         const rect = this.canvas.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
@@ -166,11 +161,6 @@ class GeometryKingdom {
                     const snappedPoint = this.snapToGrid(x, y);
                     this.points.push(snappedPoint);
                     this.draw();
-                    
-                    // 播放放置点音效
-                    if (window.audioManager && window.audioManager.initialized) {
-                        window.audioManager.playPlacePoint();
-                    }
                 }
                 break;
             case 'drag':
@@ -279,10 +269,6 @@ class GeometryKingdom {
     }
 
     checkAnswer() {
-        // 播放按钮点击音效
-        if (window.audioManager && window.audioManager.initialized) {
-            window.audioManager.playButtonClick();
-        }
         if (this.points.length !== 4) {
             this.showMessage('请先画一个完整的四边形！', false);
             return;
@@ -312,10 +298,6 @@ class GeometryKingdom {
     }
 
     showSuccess() {
-        // 播放成功音效
-        if (window.audioManager && window.audioManager.initialized) {
-            window.audioManager.playSuccess();
-        }
         const reward = this.currentLevel.reward;
         this.gameState.score += reward.coins;
         this.gameState.exp += reward.exp;

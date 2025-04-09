@@ -374,7 +374,8 @@ body {
     color: var(--text-color);
     border-left: 4px solid transparent;
     font-size: 2.2em;
-    padding: 20px 40px;
+    padding: 20px 52px;
+    min-width: 200px;
 }
 
 .tool-btn:hover {

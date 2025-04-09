@@ -55,7 +55,7 @@ body {
 
 /* 左侧边栏样式 */
 .game-sidebar {
-    width: 300px;
+    width: 800px;
     background: var(--background-color);
     padding: 20px;
     border-radius: var(--border-radius);
@@ -63,6 +63,7 @@ body {
     flex-direction: column;
     gap: 20px;
     margin-top: 40px;
+    justify-content: center;
 }
 
 /* 游戏主区域样式 */
@@ -136,6 +137,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin: auto 0;
 }
 
 .action-btn {

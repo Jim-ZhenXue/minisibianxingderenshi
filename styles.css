@@ -34,7 +34,7 @@ body {
 
 .game-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -447,8 +447,8 @@ body {
 }
 
 #gameCanvas {
-    width: 391px;
-    height: 391px;
+    width: 586px;
+    height: 586px;
     background: white;
     border-radius: 0;
     margin-bottom: 0;
@@ -462,8 +462,8 @@ body {
 }
 
 .pill-panel {
-    width: 36.8px;
-    height: 391px;
+    width: 55px;
+    height: 586px;
     display: flex;
     justify-content: center;
     align-items: center;

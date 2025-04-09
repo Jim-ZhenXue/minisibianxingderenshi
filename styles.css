@@ -152,7 +152,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 12px;
+    gap: 40px;
     white-space: nowrap;
     font-size: 1.1em;
 }
@@ -423,8 +423,9 @@ body {
 .tool-btn i,
 .action-btn i {
     font-size: 2em;
-    width: 48px;
+    min-width: 48px;
     text-align: center;
+    flex-shrink: 0;
 }
 
 .character-selection h3,

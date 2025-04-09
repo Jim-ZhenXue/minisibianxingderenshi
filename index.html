@@ -16,13 +16,6 @@
         <div class="game-layout">
             <!-- 左侧控制面板 -->
             <div class="game-sidebar">
-                <!-- 标题栏 -->
-                <div class="game-header">
-                    <div class="game-title">
-                        <span class="current-mission" id="currentMission">准备开始冒险...</span>
-                    </div>
-                </div>
-
                 <!-- 控制栏 -->
                 <div class="action-controls">
                     <button id="checkButton" class="action-btn">
@@ -39,6 +32,12 @@
 
             <!-- 主游戏区域 -->
             <div class="game-main">
+                <!-- 任务说明 -->
+                <div class="game-header">
+                    <div class="game-title">
+                        <span class="current-mission" id="currentMission">准备开始冒险...</span>
+                    </div>
+                </div>
                 <div class="canvas-area">
                     <canvas id="gameCanvas"></canvas>
                     <div class="pill-panel">
